@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
@@ -35,7 +35,7 @@ public class Name : MonoBehaviour
             }
             else
             {
-                Nice.text = "This name is banned �\\_(?)_/� Choose another name.";
+                Nice.text = "This name is banned ¯\\_(ツ)_/¯ Choose another name.";
             }
         }
     }
