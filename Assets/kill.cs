@@ -8,6 +8,7 @@ public class Kill : MonoBehaviour
 {
     public int maxHealth = 5;
     public int currentHealth;
+    private Vector2 startPosition;
 
     public HealthBar healthbar;
 
@@ -15,21 +16,26 @@ public class Kill : MonoBehaviour
     {
         currentHealth = maxHealth;
         healthbar.SetMaxHealth(maxHealth);
-
+        startPosition = transform.position;
     }
     void TakeDamage(int damage)
     {
-        currentHealth += damage;
-        healthbar.SetMaxHealth(currentHealth);
-
+        currentHealth -= damage;
+        healthbar.SetHealth(currentHealth);
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            TakeDamage(1);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            if (currentHealth > 1)
+            {
+                TakeDamage(1);
+                transform.position = startPosition;
+            }
+            else 
+            {
+                SceneManager.LoadScene("gameover");
+            }
         }
-
     }
 }

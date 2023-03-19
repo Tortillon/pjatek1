@@ -15,7 +15,7 @@ public class Name : MonoBehaviour
     public TextMeshProUGUI Nice;
     public TMP_InputField inputField;
     private string[] BannedNames = {"BOB", "JEFF", "POPO"};
-
+    public List<string> BannedNamesList;
 
 
     void Start()
@@ -48,7 +48,7 @@ public class Name : MonoBehaviour
     {
         for (int i = 0; i < BannedNames.Length; i++)
         {
-            if (inputField.text == BannedNames[i])
+            if (inputField.text == BannedNames[i] || inputField.text == BannedNamesList[i])
             {
                 return false;
             }
@@ -59,7 +59,7 @@ public class Name : MonoBehaviour
     }
     string RandomNameGenerator()
     {
-        string characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+        string characters = "BCDEGHIJKLMNOPQSTUVWXY";
         string randomName = "";
 
         int l = Random.Range(3, 7);
