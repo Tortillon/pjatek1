@@ -14,18 +14,16 @@ public class Name : MonoBehaviour
     public TextMeshProUGUI NameHim;
     public TextMeshProUGUI Nice;
     public TMP_InputField inputField;
-    private string[] BannedNames = {"BOB", "JEFF", "POPO"};
+    public TextMeshProUGUI Banned;
     public List<string> BannedNamesList;
 
 
     void Start()
     {
 
-        NameHim.text = "This is you. Name yourself or generate a random name.";
+        NameHim.text = "This is you. Name yourself or generate a random name. Some names are banned.";
         Nice.text = "Accept by clicking space";
-        inputField.onValidateInput +=
-        delegate (string s, int i, char c) { return char.ToUpper(c); };
-
+        Banned.text = "Hold button to see banned names.";
     }
     void Update()
     {
@@ -46,9 +44,9 @@ public class Name : MonoBehaviour
     public bool IsNameAllowed(TMP_InputField input)
 
     {
-        for (int i = 0; i < BannedNames.Length; i++)
+        for (int i = 0; i < BannedNamesList.Capacity; i++)
         {
-            if (inputField.text == BannedNames[i] || inputField.text == BannedNamesList[i])
+            if (inputField.text == BannedNamesList[i])
             {
                 return false;
             }
@@ -59,7 +57,7 @@ public class Name : MonoBehaviour
     }
     string RandomNameGenerator()
     {
-        string characters = "BCDEGHIJKLMNOPQSTUVWXY";
+        string characters = "ABCDEFGHIJKLMNOPQRSTUVWXY";
         string randomName = "";
 
         int l = Random.Range(3, 7);
@@ -85,8 +83,24 @@ public class Name : MonoBehaviour
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
-
-
+    private IEnumerator ShowTime(TextMeshProUGUI banned)
+    {
+        yield return new WaitForSeconds(2);
+        banned.text = "";
+    }
+    public void OnButtonCLick(TextMeshProUGUI banned)
+    {
+        banned.text = "";
+        for (int i = 0;i < BannedNamesList.Capacity;i++)
+        {
+            banned.text += BannedNamesList[i];
+            if (i != BannedNamesList.Capacity-1)
+            {
+                banned.text += ", ";
+            }
+        }
+        ShowTime(banned);
+    }
    
 
 }
