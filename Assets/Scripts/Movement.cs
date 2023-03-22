@@ -4,42 +4,47 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
+    public CharacterController controller;
     public Rigidbody2D rb;
     public int upForce = 500;
     public float speed = 500;
-    public float runSpeed = 1000;
+    public Animator animator;
 
     public bool isGrounded = false;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey(KeyCode.LeftShift))
+        float move = Input.GetAxis("Horizontal");
+        if (move == 0)
         {
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * runSpeed * Time.deltaTime, rb.velocity.y);
+            animator.SetBool("IsRun", false);
         }
         else
         {
-            rb.velocity = new Vector2(Input.GetAxis("Horizontal") * speed * Time.deltaTime, rb.velocity.y);
+            if (move > 0) 
+            {
+                transform.localScale = new Vector3(2, 2, 0);
+            }
+            else if (move < 0)
+            {
+                transform.localScale = new Vector3(-2, 2, 0);
+            }
+            rb.velocity = new Vector2(move * speed * Time.deltaTime, rb.velocity.y);
+            animator.SetBool("IsRun", true);
         }
 
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
         { 
             rb.AddForce(Vector2.up * upForce);
             isGrounded = false;
+            animator.SetBool("IsJump", true);
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
+        animator.SetBool("IsJump", false);
     }
 
 }

@@ -1407,8 +1407,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144032548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.47, y: -4, z: 0}
-  m_LocalScale: {x: 2.5727315, y: 1, z: 1}
+  m_LocalPosition: {x: -8.47, y: -5.13, z: 0}
+  m_LocalScale: {x: 18.05083, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1968,6 +1968,7 @@ GameObject:
   - component: {fileID: 1863202525}
   - component: {fileID: 1863202526}
   - component: {fileID: 1863202527}
+  - component: {fileID: 1863202528}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2062,8 +2063,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1863202519}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9, y: -1, z: 0}
-  m_LocalScale: {x: 1.327, y: 1.327, z: 1.327}
+  m_LocalPosition: {x: -9, y: -0.95, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2112,7 +2113,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8069902, y: 0.7617419}
+  m_Size: {x: 0.51795644, y: 0.58813894}
   m_EdgeRadius: 0
 --- !u!114 &1863202524
 MonoBehaviour:
@@ -2126,10 +2127,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4214c90079cb74b49938b291eb6b7ebf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  controller: {fileID: 1863202528}
   rb: {fileID: 1863202520}
   upForce: 750
   speed: 3000
-  runSpeed: 5000
+  animator: {fileID: 1863202527}
   isGrounded: 0
 --- !u!114 &1863202525
 MonoBehaviour:
@@ -2179,6 +2181,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1863202528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863202519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60703c8a0f727dd4ab05e762d73599a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1895319079
 GameObject:
   m_ObjectHideFlags: 0
