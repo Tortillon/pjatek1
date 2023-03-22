@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public CharacterController controller;
     public Rigidbody2D rb;
     public int upForce = 500;
     public float speed = 500;
@@ -38,6 +37,10 @@ public class Movement : MonoBehaviour
             rb.AddForce(Vector2.up * upForce);
             isGrounded = false;
             animator.SetBool("IsJump", true);
+            if (Input.GetAxis("Verctical") < 0)
+            {
+                animator.SetBool("IsJump", true);
+            }
         }
     }
 

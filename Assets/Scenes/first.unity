@@ -1963,12 +1963,13 @@ GameObject:
   - component: {fileID: 1863202522}
   - component: {fileID: 1863202521}
   - component: {fileID: 1863202520}
+  - component: {fileID: 1863202530}
   - component: {fileID: 1863202523}
-  - component: {fileID: 1863202524}
   - component: {fileID: 1863202525}
   - component: {fileID: 1863202526}
   - component: {fileID: 1863202527}
   - component: {fileID: 1863202528}
+  - component: {fileID: 1863202529}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2115,24 +2116,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.51795644, y: 0.58813894}
   m_EdgeRadius: 0
---- !u!114 &1863202524
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1863202519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4214c90079cb74b49938b291eb6b7ebf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  controller: {fileID: 1863202528}
-  rb: {fileID: 1863202520}
-  upForce: 750
-  speed: 3000
-  animator: {fileID: 1863202527}
-  isGrounded: 0
 --- !u!114 &1863202525
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2193,6 +2176,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60703c8a0f727dd4ab05e762d73599a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1863202529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863202519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16034d72eff891443b7dd4322b04b2b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  controller: {fileID: 1863202528}
+  speed: 40
+--- !u!114 &1863202530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1863202519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4214c90079cb74b49938b291eb6b7ebf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1863202520}
+  upForce: 750
+  speed: 2000
+  animator: {fileID: 1863202527}
+  isGrounded: 0
 --- !u!1 &1895319079
 GameObject:
   m_ObjectHideFlags: 0
