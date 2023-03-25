@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Pill
+  - Poddle
   layers:
   - Default
   - TransparentFX
@@ -42,4 +43,22 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 1440833997
+    locked: 0
+  - name: background
+    uniqueID: 4172980209
+    locked: 0
+  - name: platforms
+    uniqueID: 1636713371
+    locked: 0
+  - name: enemies
+    uniqueID: 1657290233
+    locked: 0
+  - name: collectibles
+    uniqueID: 3713491197
+    locked: 0
+  - name: player
+    uniqueID: 3181869555
     locked: 0

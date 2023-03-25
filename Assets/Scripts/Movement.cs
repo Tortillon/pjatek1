@@ -8,39 +8,46 @@ public class Movement : MonoBehaviour
     public int upForce = 500;
     public float speed = 500;
     public Animator animator;
+    public PlayerHealth ph;
 
     public bool isGrounded = false;
 
     void Update()
     {
-        float move = Input.GetAxis("Horizontal");
-        if (move == 0)
+        if (ph.currentHealth > 0)
         {
-            animator.SetBool("IsRun", false);
-        }
-        else
-        {
-            if (move > 0) 
+            float move = Input.GetAxis("Horizontal");
+            if (move == 0)
             {
-                transform.localScale = new Vector3(2, 2, 0);
+                animator.SetBool("IsRun", false);
             }
-            else if (move < 0)
+            else
             {
-                transform.localScale = new Vector3(-2, 2, 0);
+                if (move > 0)
+                {
+                    transform.localScale = new Vector3(2, 2, 0);
+                }
+                else if (move < 0)
+                {
+                    transform.localScale = new Vector3(-2, 2, 0);
+                }
+                rb.velocity = new Vector2(move * speed * Time.deltaTime, rb.velocity.y);
+                animator.SetBool("IsRun", true);
             }
-            rb.velocity = new Vector2(move * speed * Time.deltaTime, rb.velocity.y);
-            animator.SetBool("IsRun", true);
-        }
 
-        if (Input.GetKeyDown(KeyCode.Space) && isGrounded) 
-        { 
-            rb.AddForce(Vector2.up * upForce);
-            isGrounded = false;
-            animator.SetBool("IsJump", true);
-            if (Input.GetAxis("Verctical") < 0)
+
+            if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
             {
+                rb.AddForce(Vector2.up * upForce);
+                isGrounded = false;
                 animator.SetBool("IsJump", true);
             }
+            
+        }
+        
+        if (rb.velocity.y<0)
+        {
+            animator.SetBool("IsFall", true);
         }
     }
 
@@ -48,6 +55,7 @@ public class Movement : MonoBehaviour
     {
         isGrounded = true;
         animator.SetBool("IsJump", false);
+        animator.SetBool("IsFall", false);
     }
 
 }

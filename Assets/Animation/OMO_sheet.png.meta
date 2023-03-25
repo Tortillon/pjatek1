@@ -121,8 +121,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ae24831b021dcc42b4153210b25a77e
-      internalID: -459535456
+      spriteID: 05a70eb888170a04bb3abc427e4d1cd3
+      internalID: 1732585792
       vertices: []
       indices: 
       edges: []
@@ -142,8 +142,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ad048d8254191b447829e75a3fa5954b
-      internalID: -402554737
+      spriteID: 6e611827ed1b9d54cb2831d607e06a4d
+      internalID: -711872788
       vertices: []
       indices: 
       edges: []
@@ -163,8 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1e2f0a63a1912834a91304afa5e460c7
-      internalID: -1689433721
+      spriteID: 10d483228a47ee14e8369bd065737956
+      internalID: -1463309835
       vertices: []
       indices: 
       edges: []
@@ -184,8 +184,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 596f83cd7c49ac048ae2a276072b6945
-      internalID: -1511647602
+      spriteID: 08714cc8d09422046bca1dd35ddd77ea
+      internalID: 345074630
       vertices: []
       indices: 
       edges: []
@@ -205,8 +205,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ea29b6b49397d44ea87131db5c50e3d
-      internalID: 1464519053
+      spriteID: 0d7cc3bdda5d6dc46b0ccc59191185ff
+      internalID: 806389618
       vertices: []
       indices: 
       edges: []
@@ -226,14 +226,56 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a5fe0063d60c62748993a7b98bea6e98
-      internalID: -1363899689
+      spriteID: e1a2b247a17e64a41950ca6a86bdd3de
+      internalID: -1767866959
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: OMO_sheet_6
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f9c793bedc94b141b9ddd3afc86e91a
+      internalID: -934694532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OMO_sheet_7
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 40
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe51b8a1337ec504d8a413bb353c3123
+      internalID: 175667434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OMO_sheet_8
       rect:
         serializedVersion: 2
         x: 0
@@ -247,8 +289,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07e56ed4164c9344896bb9ef9ba4eeff
-      internalID: 885717496
+      spriteID: f2b3ff400deff3b48a5423543f921ecf
+      internalID: 739298496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OMO_sheet_9
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61a87df3569ee3045aa2033dd6750df3
+      internalID: 2109179455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OMO_sheet_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 299bcf2931891c24ab380a0496e6155a
+      internalID: 2141828986
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: OMO_sheet_11
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 0
+        width: 40
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ac81c589251b54493f381da8c028de
+      internalID: 784768332
       vertices: []
       indices: 
       edges: []
@@ -264,13 +369,18 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      OMO_sheet_0: -459535456
-      OMO_sheet_1: -402554737
-      OMO_sheet_2: -1689433721
-      OMO_sheet_3: -1511647602
-      OMO_sheet_4: 1464519053
-      OMO_sheet_5: -1363899689
-      OMO_sheet_6: 885717496
+      OMO_sheet_0: 1732585792
+      OMO_sheet_1: -711872788
+      OMO_sheet_10: 2141828986
+      OMO_sheet_11: 784768332
+      OMO_sheet_2: -1463309835
+      OMO_sheet_3: 345074630
+      OMO_sheet_4: 806389618
+      OMO_sheet_5: -1767866959
+      OMO_sheet_6: -934694532
+      OMO_sheet_7: 175667434
+      OMO_sheet_8: 739298496
+      OMO_sheet_9: 2109179455
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

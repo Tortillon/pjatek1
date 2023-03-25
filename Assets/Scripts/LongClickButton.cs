@@ -6,18 +6,15 @@ using UnityEngine.UI;
 
 public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 {
-    private bool pointerDown;
-    public Name name;
+    public new Name name;
     public TextMeshProUGUI banned;
 
 
     public UnityEvent onLongClick;
     public UnityEvent onRelease;
 
-
     public void OnPointerDown(PointerEventData eventData)
     {
-        pointerDown = true;
         onLongClick?.Invoke();
         Debug.Log("OnPointerDown");
     }
@@ -33,7 +30,6 @@ public class LongClickButton : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
     private void Reset()
     {
-        pointerDown = false;
         onRelease?.Invoke();
     }
 
