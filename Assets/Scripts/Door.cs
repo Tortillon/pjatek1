@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Door : MonoBehaviour    
 {
-    readonly Light light;
+    public Light dLight;
 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            light.intensity = 0;
+            dLight.intensity = 0;
         }
 
     }
