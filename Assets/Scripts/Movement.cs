@@ -2,15 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(BoxCollider2D))]
+[RequireComponent(typeof(Animator))]
+
 public class Movement : MonoBehaviour
 {
-    public Rigidbody2D rb;
-    public int upForce = 500;
-    public float speed = 500;
-    public Animator animator;
+    private Rigidbody2D rb;
+    private Animator animator;
     public PlayerHealth ph;
 
+    public int upForce = 500;
+    public float speed = 500;
+
     public bool isGrounded = false;
+
+    void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
+    }
 
     void Update()
     {
@@ -23,14 +34,14 @@ public class Movement : MonoBehaviour
             }
             else
             {
-                if (move > 0)
+                /*if (move > 0)
                 {
                     transform.localScale = new Vector3(2, 2, 0);
                 }
                 else if (move < 0)
                 {
                     transform.localScale = new Vector3(-2, 2, 0);
-                }
+                }*/
                 rb.velocity = new Vector2(move * speed * Time.deltaTime, rb.velocity.y);
                 animator.SetBool("IsRun", true);
             }
